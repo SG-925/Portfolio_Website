@@ -6,7 +6,7 @@
     <title>Shlok Gohil | Student Portfolio</title>
     <meta
       name="description"
-      content="A clean student portfolio for Shlok Gohil, highlighting projects, experience, skills, resume details, and contact information."
+      content="A student portfolio for Shlok Gohil with separate pages for about, projects, resume, and contact."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,33 +14,58 @@
     <div class="page">
       <header class="site-header">
         <nav class="nav" aria-label="Main navigation">
-          <a href="#home" class="brand">Shlok Gohil</a>
+          <a href="index.html" class="brand">Shlok Gohil</a>
           <ul class="nav-links">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </header>
 
       <main>
-        <section id="home" class="section hero">
-          <div class="eyebrow"><span class="dot"></span>High School Sophmore &middot; Class of 2029</div>
-          <h1>Hi, I'm Shlok Gohil &mdash;<br /><span class="muted">Builder, Tinkerer, Entrepreneur</span></h1>
-          <p class="lead">
-            High school student passionate about computer science, robotics, and business. I love building things &mdash;
-            from robots that solve real problems to software that helps people.
-          </p>
-          <div class="actions">
-            <a class="button button-primary" href="#projects">View Projects <span aria-hidden="true">-&gt;</span></a>
-            <a class="button" href="#contact">Get in Touch</a>
-            <div class="icon-row" aria-label="Social links">
-              <a href="https://github.com/SG-925" aria-label="GitHub">GH</a>
-              <a href="https://www.linkedin.com/in/shlok-gohil-320a95397/" aria-label="LinkedIn">IN</a>
-              <a href="mailto:gohil.shlok@gmail.com" aria-label="Email">@</a>
+        <section class="section hero">
+          <div class="hero-grid">
+            <div>
+              <div class="eyebrow"><span class="dot"></span>High School Sophomore &middot; Class of 2029</div>
+              <h1>Shlok Gohil<br /><span class="muted">Builder, Tinkerer, Entrepreneur</span></h1>
+              <p class="lead">
+                I build robotics, software, and hardware projects that solve real problems. My work blends engineering,
+                business, and design, and I’m always looking for the next thing to build.
+              </p>
+              <div class="actions">
+                <a class="button button-primary" href="projects.html">View Projects <span aria-hidden="true">-&gt;</span></a>
+                <a class="button" href="contact.html">Get in Touch</a>
+                <div class="icon-row" aria-label="Social links">
+                  <a href="https://github.com/SG-925" aria-label="GitHub">GH</a>
+                  <a href="https://www.linkedin.com/in/shlok-gohil-320a95397/" aria-label="LinkedIn">IN</a>
+                  <a href="mailto:gohil.shlok@gmail.com" aria-label="Email">@</a>
+                </div>
+              </div>
             </div>
+
+            <aside class="hero-panel">
+              <div class="stack" style="gap: 24px;">
+                <div>
+                  <div class="muted" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em;">At a glance</div>
+                  <div style="margin-top: 8px;">
+                    <strong>Northview High School</strong><br />
+                    <span class="muted">Atlanta, Georgia</span>
+                  </div>
+                </div>
+                <div class="mini-list">
+                  <div><span class="muted">Weighted GPA</span><strong>4.0</strong></div>
+                  <div><span class="muted">Projects</span><strong>10+</strong></div>
+                  <div><span class="muted">Club Roles</span><strong>4</strong></div>
+                  <div><span class="muted">Awards</span><strong>2</strong></div>
+                </div>
+                <div class="home-note muted">
+                  Robotics, PCB design, 3D printing, financial analysis, and a strong interest in building useful tools.
+                </div>
+              </div>
+            </aside>
           </div>
 
           <div class="stats" aria-label="Portfolio stats">
@@ -52,167 +77,46 @@
 
           <div class="section-head">
             <h2>Featured Projects</h2>
-            <a class="text-link" href="#projects">All projects -&gt;</a>
+            <a class="text-link" href="projects.html">All projects -&gt;</a>
           </div>
           <div class="grid grid-3">
             <article class="card">
-              <h3>Autonomous Line-Following Robot</h3>
-              <p>Built a fully autonomous robot using PID control and IR sensors that navigates complex track layouts. Placed 2nd at the regional robotics invitational.</p>
-              <div class="tags"><span class="tag">Arduino</span><span class="tag">C++</span><span class="tag">PID Control</span><span class="tag">Electronics</span></div>
+              <h3>Macropad - PCB Design &amp; Programming</h3>
+              <p>Designed a custom PCB and programmed a fully functional macropad from scratch.</p>
+              <div class="tags"><span class="tag">PCB Design</span><span class="tag">Programming</span><span class="tag">Hardware Design</span></div>
+              <div style="margin-top: 18px;"><a class="text-link" href="projects/macropad-pcb.html">View project -&gt;</a></div>
             </article>
             <article class="card">
-              <h3>Student Marketplace App</h3>
-              <p>A peer-to-peer marketplace for students to buy and sell used textbooks, supplies, and electronics within their school community.</p>
-              <div class="tags"><span class="tag">React</span><span class="tag">Firebase</span><span class="tag">Tailwind</span><span class="tag">Node.js</span></div>
+              <h3>Financial Statement Analysis - Chipotle</h3>
+              <p>Completed a financial analysis project for FBLA focused on data interpretation and presentation.</p>
+              <div class="tags"><span class="tag">Finance</span><span class="tag">Analysis</span><span class="tag">Presentations</span></div>
+              <div style="margin-top: 18px;"><a class="text-link" href="projects/financial-analysis-chipotle.html">View project -&gt;</a></div>
             </article>
             <article class="card">
-              <h3>AI Study Planner</h3>
-              <p>A web app that generates personalized study schedules based on upcoming exams and learning goals, using a simple ML model trained on student data.</p>
-              <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">scikit-learn</span><span class="tag">React</span></div>
+              <h3>FRC Robot Design Contribution</h3>
+              <p>Helped shape the mechanical and strategic design of an FRC robot for competition.</p>
+              <div class="tags"><span class="tag">CAD</span><span class="tag">Mechanical Design</span><span class="tag">Strategy</span></div>
+              <div style="margin-top: 18px;"><a class="text-link" href="projects/frc-robot.html">View project -&gt;</a></div>
             </article>
           </div>
 
-          <h2 style="margin-top: 80px;">Currently Exploring</h2>
-          <div class="pill-row">
-            <span class="pill">Machine Learning</span><span class="pill">3D Printing</span><span class="pill">Startup Finance</span>
-            <span class="pill">Computer Vision</span><span class="pill">PCB Design</span><span class="pill">Product Management</span>
-          </div>
-        </section>
-
-        <section id="about" class="section">
-          <h1 class="page-title">About Me</h1>
-          <p class="lead">
-            I'm a high school student who loves building things &mdash; whether that's PCB designs and robots for FRC competitions, financial analysis projects for FBLA, or 3D-printed designs. I'm always working on something.
-          </p>
-
-          <div class="two-column">
-            <div>
-              <h2>Background</h2>
-              <p class=\"muted\">I'm based in Atlanta, Georgia, and fell in love with technology and design after building my first project. Since then, I've been passionate about PCB design, robotics, and 3D printing &mdash; combining hardware design with practical applications.</p>
-              <p class=\"muted\">I'm a design and strategy team member in FRC robotics team #1683, competing in FBLA, a member of the AI club where I volunteer as a tutor, and a Life Scout. I love solving real problems through thoughtful engineering and design.</p>
-              <p class=\"muted\">I'm focused on developing expertise in PCB design, CAD, and 3D printing while also building my skills in financial analysis and strategic thinking. I aim to combine these skills in my future career.</p>
-            </div>
-            <div class="stack">
-              <div class="card stack">
-                <div class="profile-mark">SG</div>
-                <div><strong>Shlok Gohil</strong><br /><span class="muted">student &middot; Northview High School</span></div>
-                <div class="stack">
-                  <div class="detail-row"><span class="muted">Location</span><span>Atlanta, GA</span></div>
-                  <div class="detail-row"><span class="muted">Email</span><span>gohil.shlok@gmail.com</span></div>
-                  <div class="detail-row"><span class="muted">GitHub</span><span>@shlokgohil</span></div>
-                  <div class="detail-row"><span class="muted">Class of</span><span>2029</span></div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="muted" style="font-size: 0.875rem; margin-bottom: 12px;">Interests</div>
-                <div class="tags"><span class="tag">Robotics</span><span class="tag">Entrepreneurship</span><span class="tag">Coding</span><span class="tag">3D Printing</span><span class="tag">Basketball</span><span class="tag">Chess</span></div>
+          <div class="two-column" style="margin-top: 80px;">
+            <div class="section-surface">
+              <h2>What I Focus On</h2>
+              <div class="pill-row">
+                <span class="pill">Machine Learning</span>
+                <span class="pill">3D Printing</span>
+                <span class="pill">Startup Finance</span>
+                <span class="pill">PCB Design</span>
+                <span class="pill">Product Management</span>
               </div>
             </div>
-          </div>
-
-          <h2 style="margin-top: 80px;">Skills &amp; Technologies</h2>
-          <div class="grid grid-4">
-            <div><p class="muted">Programming</p><div class="skill-list"><span>Python</span><span>HTML</span></div></div>
-            <div><p class="muted">Design &amp; Engineering</p><div class="skill-list"><span>PCB Design</span><span>CAD</span><span>3D Printing</span><span>KiCad</span></div></div>
-            <div><p class="muted">Business &amp; Analysis</p><div class="skill-list"><span>Financial Statement Analysis</span><span>Financial Modeling</span><span>Strategic Thinking</span></div></div>
-            <div><p class="muted">Leadership &amp; Communication</p><div class="skill-list"><span>Leadership</span><span>Communication</span><span>Problem Solving</span><span>Teaching</span><span>Team Collaboration</span></div></div>
-          </div>
-
-          <h2 style="margin-top: 80px;">Timeline</h2>
-          <div>
-            <div class="timeline-item"><div class="timeline-line"><span class="timeline-dot"></span><span class="timeline-stem"></span></div><div><div class="muted" style="font-size: 0.75rem;">2026 - Present</div><strong>Design &amp; Strategy Team Member</strong><p class="muted" style="font-size: 0.875rem;">FRC Robotics Team #1683</p><p class="muted">Contributing to FRC robot design and strategy. Involved in mechanical design decisions and strategic planning for competitions.</p></div></div>
-            <div class="timeline-item"><div class="timeline-line"><span class="timeline-dot"></span><span class="timeline-stem"></span></div><div><div class="muted" style="font-size: 0.75rem;">2025 - Present</div><strong>Design Team Member</strong><p class="muted" style="font-size: 0.875rem;">Northview Techno Titans Robotics Foundation Inc.</p><p class="muted">Supporting CAD-driven robot design and prototype development as part of the robotics design team.</p></div></div>
-            <div class="timeline-item"><div class="timeline-line"><span class="timeline-dot"></span><span class="timeline-stem"></span></div><div><div class="muted" style="font-size: 0.75rem;">2024 - Present</div><strong>Competitor &amp; Member</strong><p class="muted" style="font-size: 0.875rem;">FBLA &middot; AI Club &middot; Scout</p><p class="muted">Active competitor in FBLA, member of AI club where I volunteer as a tutor, and Life Scout working on leadership, communication, and problem solving.</p></div></div>
-            <div class="timeline-item"><div class="timeline-line"><span class="timeline-dot"></span><span class="timeline-stem"></span></div><div><div class="muted" style="font-size: 0.75rem;">2024</div><strong>Macropad Design &amp; Development</strong><p class="muted" style="font-size: 0.875rem;">Personal Project</p><p class="muted">Designed a custom PCB and programmed a macropad. Learned PCB design principles and brought a hardware project from concept to completion.</p></div></div>
-            <div class="timeline-item"><div class="timeline-line"><span class="timeline-dot"></span></div><div><div class="muted" style="font-size: 0.75rem;">2024</div><strong>Financial Statement Analysis</strong><p class="muted" style="font-size: 0.875rem;">FBLA Competition Project</p><p class="muted">Completed financial statement analysis for Chipotle. Won FBLA competitions with this project, demonstrating financial analysis and presentation skills.</p></div></div>
-          </div>
-        </section>
-
-        <section id="projects" class="section">
-          <h1 class="page-title">Projects</h1>
-          <p class="lead">Things I've built &mdash; from robots and web apps to business plans. Each one taught me something new.</p>
-          <div class="filters" aria-label="Project filters">
-            <button class="filter active" data-filter="All">All</button>
-            <button class="filter" data-filter="CS">CS</button>
-            <button class="filter" data-filter="Robotics">Robotics</button>
-            <button class="filter" data-filter="Web">Web</button>
-            <button class="filter" data-filter="Business">Business</button>
-          </div>
-          <div class="grid grid-2" id="projectGrid"></div>
-        </section>
-
-        <section id="resume" class="section section-narrow">
-          <div class="resume-row" style="margin-bottom: 64px;">
-            <div><h1 class="page-title" style="margin-bottom: 8px;">Resume</h1><p class="muted">Last updated June 2026</p></div>
-            <a class="button" href="#">Download PDF</a>
-          </div>
-
-          <div class="resume-section">
-            <h2>Experience &amp; Activities</h2>
-            <div class="resume-item"><div class="resume-row"><div><strong>Design &amp; Strategy Team Member</strong><br /><span class="muted">FRC Robotics Team #1683</span></div><span class="muted">2026 - Present</span></div><ul class="bullets"><li>Contributing to FRC robot design and strategic planning for competitions.</li><li>Involved in mechanical design decisions and overall team strategy.</li><li>Collaborating with team members to bring designs to life.</li></ul></div>
-            <div class="resume-item"><div class="resume-row"><div><strong>Design Team Member</strong><br /><span class="muted">Northview Techno Titans Robotics Foundation Inc.</span></div><span class="muted">Aug 2025 - Present</span></div><ul class="bullets"><li>Supporting CAD-driven robot design and prototype development.</li><li>Applying computer-aided design and mechanical engineering principles to build competition-ready systems.</li><li>Working with team members to refine manufacturing-ready assemblies and improve robot performance.</li></ul></div>
-            <div class="resume-item"><div class="resume-row"><div><strong>Competitor in FBLA</strong><br /><span class="muted">Future Business Leaders of America</span></div><span class="muted">2024 - Present</span></div><ul class="bullets"><li>Competed in financial statement analysis category using Chipotle as a case study.</li><li>Won FBLA competitions with financial analysis projects.</li><li>Developed skills in financial modeling, data analysis, strategic communication, and presentation.</li></ul></div>
-            <div class="resume-item"><div class="resume-row"><div><strong>Member &amp; Volunteer Tutor</strong><br /><span class="muted">AI Club</span></div><span class="muted">2024 - Present</span></div><ul class="bullets"><li>Active member of school's AI club.</li><li>Volunteer tutor helping peers understand AI concepts and applications.</li><li>Contributing to club projects and learning initiatives.</li></ul></div>
-            <div class="resume-item"><div class="resume-row"><div><strong>Life Scout</strong><br /><span class="muted">Boy Scouts of America</span></div><span class="muted">2024 - Present</span></div><ul class="bullets"><li>Developed leadership, communication, problem solving, and teaching skills through scout leadership roles.</li><li>Mentored younger scouts while working toward Eagle Scout goals.</li><li>Led community service and project planning initiatives.</li></ul></div>
-          </div>
-
-          <div class="resume-section">
-            <h2>Education</h2>
-            <div class="resume-row"><div><strong>High School Diploma (In Progress)</strong><br /><span class="muted">Northview High School</span></div><span class="muted">Class of 2029</span></div>
-            <p class="muted">Weighted GPA: 4.0 &middot; Class Rank: Top 5%</p>
-            <div class="tags"><span class="tag">AP Computer Science Principles</span><span class="tag">AP Precalculus</span><span class="tag">Computer-Aided Design (CAD)</span></div>
-          </div>
-
-          <div class="resume-section">
-            <h2>Skills</h2>
-            <p><span class="muted">Programming:</span> Python, HTML</p>
-            <p><span class="muted">PCB &amp; Hardware:</span> PCB Design, KiCad, CAD, 3D Printing, Electronics Design</p>
-            <p><span class="muted">Business &amp; Analysis:</span> Financial Statement Analysis, Financial Modeling, Presentations, Strategic Thinking</p>
-            <p><span class="muted">Soft Skills:</span> Leadership, Communication, Problem Solving, Teaching, Team Collaboration</p>
-          </div>
-
-          <div class="resume-section">
-            <h2>Awards &amp; Recognition</h2>
-            <div class="stack">
-              <div class="award-row"><span>Best in Category &mdash; Engineering, SD Regional Science Fair</span><span class="muted">2023</span></div>
-              <div class="award-row"><span>2nd Place &mdash; Regional Robotics Invitational</span><span class="muted">2024</span></div>
-              <div class="award-row"><span>NFTE National Top 10 &mdash; StudySync Business Plan</span><span class="muted">2024</span></div>
-              <div class="award-row"><span>FBLA State Qualifier &mdash; Coding &amp; Programming</span><span class="muted">2024</span></div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" class="section">
-          <h1 class="page-title">Get in Touch</h1>
-          <p class="lead">Whether you want to collaborate on a project, chat about robotics or startups, or just say hi &mdash; I'd love to hear from you.</p>
-          <div class="two-column">
-            <div class="stack" style="gap: 40px;">
-              <div>
-                <h2>Contact Details</h2>
-                <div class="stack">
-                  <a class="contact-card" href="mailto:gohil.shlok@gmail.com"><span class="contact-icon">@</span><span><span class="muted" style="font-size: 0.75rem;">Email</span><br />gohil.shlok@gmail.com</span></a>
-                  <a class="contact-card" href="https://github.com/SG-925"><span class="contact-icon">GH</span><span><span class="muted" style="font-size: 0.75rem;">GitHub</span><br />@shlokgohil</span></a>
-                  <a class="contact-card" href="https://www.linkedin.com/in/shlok-gohil-320a95397/"><span class="contact-icon">IN</span><span><span class="muted" style="font-size: 0.75rem;">LinkedIn</span><br />linkedin.com/in/shlokgohil</span></a>
-                </div>
-              </div>
-              <div class="card"><h3>Response Time</h3><p>I typically respond within 24-48 hours. Email is the best way to reach me. I'm based in Atlanta, GA (EST).</p></div>
-              <div class="card"><h3>Open To</h3><ul class="bullets"><li>Robotics collaborations &amp; competitions</li><li>Startup / side project ideas</li><li>Mentorship &amp; networking</li><li>Speaking at workshops or events</li></ul></div>
-            </div>
-            <div>
-              <h2>Send a Message</h2>
-              <form id="contactForm">
-                <div class="grid grid-2">
-                  <div><label for="name">Name</label><input id="name" name="name" required placeholder="Your name" /></div>
-                  <div><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="your@email.com" /></div>
-                </div>
-                <div><label for="subject">Subject</label><input id="subject" name="subject" required placeholder="What's this about?" /></div>
-                <div><label for="message">Message</label><textarea id="message" name="message" required placeholder="Tell me what's on your mind..."></textarea></div>
-                <button class="button button-primary" type="submit">Send Message</button>
-              </form>
-              <div class="success" id="successMessage">
-                <h3>Message Sent!</h3>
-                <p class="muted">Thanks for reaching out. I'll get back to you within 48 hours.</p>
-                <button class="button" id="sendAnother" type="button">Send Another</button>
+            <div class="section-surface">
+              <h2>Quick Links</h2>
+              <div class="stack">
+                <a class="contact-card" href="about.html"><span class="contact-icon">A</span><span><strong>About</strong><br /><span class="muted">Background, skills, and timeline</span></span></a>
+                <a class="contact-card" href="resume.html"><span class="contact-icon">R</span><span><strong>Resume</strong><br /><span class="muted">Experience, education, and awards</span></span></a>
+                <a class="contact-card" href="contact.html"><span class="contact-icon">C</span><span><strong>Contact</strong><br /><span class="muted">Email and message form</span></span></a>
               </div>
             </div>
           </div>

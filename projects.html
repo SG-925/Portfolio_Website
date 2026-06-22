@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Shlok Gohil</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html" class="brand">Shlok Gohil</a>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="eyebrow"><span class="dot"></span>Projects</div>
+          <h1 class="page-title" style="margin-bottom: 12px;">Things I've built</h1>
+          <p class="lead">
+            A mix of robotics, PCB design, business, and software work. Each project page is set up already, and I'll
+            add the details when you're ready.
+          </p>
+
+          <div class="filters" aria-label="Project filters">
+            <button class="filter active" data-filter="All">All</button>
+            <button class="filter" data-filter="CS">CS</button>
+            <button class="filter" data-filter="Robotics">Robotics</button>
+            <button class="filter" data-filter="Web">Web</button>
+            <button class="filter" data-filter="Business">Business</button>
+          </div>
+
+          <div class="grid grid-2" id="projectGrid"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span>&copy; 2024 Shlok Gohil. All rights reserved.</span>
+          <div class="footer-links"><a href="https://github.com/SG-925">GitHub</a><a href="https://www.linkedin.com/in/shlok-gohil-320a95397/">LinkedIn</a><a href="#">Instagram</a></div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

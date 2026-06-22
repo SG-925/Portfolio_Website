@@ -11,7 +11,8 @@ const projects = [
     tags: ["PCB Design", "Programming", "Hardware Design"],
     category: "Robotics",
     status: "Completed",
-    year: "2024"
+    year: "2024",
+    url: "projects/macropad-pcb.html"
   },
   {
     title: "Financial Statement Analysis - Chipotle",
@@ -19,7 +20,8 @@ const projects = [
     tags: ["Financial Analysis", "Data Analysis", "Presentations"],
     category: "Business",
     status: "Completed",
-    year: "2024"
+    year: "2024",
+    url: "projects/financial-analysis-chipotle.html"
   },
   {
     title: "FRC Robot Design Contribution",
@@ -27,7 +29,8 @@ const projects = [
     tags: ["CAD", "Mechanical Design", "Strategy"],
     category: "Robotics",
     status: "Completed",
-    year: "2026"
+    year: "2026",
+    url: "projects/frc-robot.html"
   },
   {
     title: "Development Board - KiCad PCB",
@@ -35,7 +38,8 @@ const projects = [
     tags: ["KiCad", "PCB Design", "Electronics"],
     category: "Robotics",
     status: "In Progress",
-    year: "2026"
+    year: "2026",
+    url: "projects/development-board.html"
   },
   {
     title: "3D Printing Design Projects",
@@ -43,7 +47,8 @@ const projects = [
     tags: ["3D Printing", "CAD", "Design"],
     category: "Robotics",
     status: "In Progress",
-    year: "2026"
+    year: "2026",
+    url: "projects/3d-printing-projects.html"
   },
   {
     title: "PCB Design Studies",
@@ -51,7 +56,8 @@ const projects = [
     tags: ["PCB Design", "Electronics", "Technical Learning"],
     category: "Robotics",
     status: "In Progress",
-    year: "2026"
+    year: "2026",
+    url: "projects/pcb-design-studies.html"
   },
   {
     title: "FBLA Financial Modeling",
@@ -59,7 +65,8 @@ const projects = [
     tags: ["Financial Modeling", "Analysis", "Business"],
     category: "Business",
     status: "In Progress",
-    year: "2026"
+    year: "2026",
+    url: "projects/fbla-financial-modeling.html"
   },
   {
     title: "AI Club Tutoring Initiatives",
@@ -67,7 +74,8 @@ const projects = [
     tags: ["AI", "Tutoring", "Community"],
     category: "CS",
     status: "In Progress",
-    year: "2026"
+    year: "2026",
+    url: "projects/ai-club-tutoring.html"
   }
 ];
 
@@ -78,51 +86,38 @@ const projects = [
 const projectGrid = document.querySelector("#projectGrid");
 const filters = document.querySelectorAll(".filter");
 
-function renderProjects(category) {
-  const visible = category === "All" ? projects : projects.filter((project) => project.category === category);
-  projectGrid.innerHTML = visible.map((project) => `
-    <article class="card" data-category="${project.category}">
-      <div class="project-top">
-        <div class="tags">
-          <span class="tag">${project.category}</span>
-          ${project.status === "In Progress" ? '<span class="status">In Progress</span>' : ""}
+if (projectGrid) {
+  function renderProjects(category) {
+    const visible = category === "All" ? projects : projects.filter((project) => project.category === category);
+    projectGrid.innerHTML = visible.map((project) => `
+      <article class="card" data-category="${project.category}">
+        <div class="project-top">
+          <div class="tags">
+            <span class="tag">${project.category}</span>
+            ${project.status === "In Progress" ? '<span class="status">In Progress</span>' : ""}
+          </div>
+          <span class="muted" style="font-size: 0.75rem;">${project.year}</span>
         </div>
-        <span class="muted" style="font-size: 0.75rem;">${project.year}</span>
-      </div>
-      <h3 style="margin-top: 14px;">${project.title}</h3>
-      <p>${project.description}</p>
-      <div class="project-bottom">
-        <div class="tags">${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</div>
-        <div class="project-actions"><a href="#" aria-label="${project.title} GitHub">GH</a><a href="#" aria-label="${project.title} external link">-&gt;</a></div>
-      </div>
-    </article>
-  `).join("");
-}
+        <h3 style="margin-top: 14px;">${project.title}</h3>
+        <p>${project.description}</p>
+        <div class="project-bottom">
+          <div class="tags">${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</div>
+          <div class="project-actions"><a href="${project.url}" aria-label="Open ${project.title} project page">Open</a><a href="${project.url}" aria-label="${project.title} project details">-&gt;</a></div>
+        </div>
+      </article>
+    `).join("");
+  }
 
-filters.forEach((button) => {
-  button.addEventListener("click", () => {
-    filters.forEach((item) => item.classList.remove("active"));
-    button.classList.add("active");
-    renderProjects(button.dataset.filter);
+  filters.forEach((button) => {
+    button.addEventListener("click", () => {
+      filters.forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
+      renderProjects(button.dataset.filter);
+    });
   });
-});
 
-renderProjects("All");
-
-// ==========================================
-// NAVIGATION HIGHLIGHTING
-// ==========================================
-
-const links = document.querySelectorAll(".nav-links a");
-const sections = [...links].map((link) => document.querySelector(link.getAttribute("href")));
-
-function updateActiveLink() {
-  const current = sections.findLast((section) => section && section.offsetTop - 120 <= window.scrollY);
-  if (!current) return;
-  links.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === `#${current.id}`));
+  renderProjects("All");
 }
-
-window.addEventListener("scroll", updateActiveLink, { passive: true });
 
 // ==========================================
 // CONTACT FORM
@@ -132,14 +127,16 @@ const form = document.querySelector("#contactForm");
 const success = document.querySelector("#successMessage");
 const sendAnother = document.querySelector("#sendAnother");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  form.classList.add("hidden");
-  success.classList.add("visible");
-});
+if (form && success && sendAnother) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    form.classList.add("hidden");
+    success.classList.add("visible");
+  });
 
-sendAnother.addEventListener("click", () => {
-  form.reset();
-  success.classList.remove("visible");
-  form.classList.remove("hidden");
-});
+  sendAnother.addEventListener("click", () => {
+    form.reset();
+    success.classList.remove("visible");
+    form.classList.remove("hidden");
+  });
+}
